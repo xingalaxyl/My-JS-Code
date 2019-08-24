@@ -1,12 +1,10 @@
-// 编程输入一个三位整数，将其颠倒后输出。
-// 例如输入123，输出321
+// 15、编程输入梯形的上底、下底和高，计算梯形面积的值。
 
+var t, b, h;
+t = prompt('请输入上底');
+b = prompt('请输入下底');
+h = prompt('请输入高');
 
-var n;
-n = prompt('请输入一个三位整数')
-
-var a, b, c;
-a = parseInt(n / 100) + '';
-b = parseInt(n % 100 / 10) + '';
-c = parseInt(n % 10) + '';
-document.write(c + b + a);
+var s;
+s = (t + b) * h / 2;
+document.write('面积：' + s);

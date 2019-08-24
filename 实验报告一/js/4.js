@@ -1,11 +1,10 @@
-// 4、编程输入一个三位整数，拆分每一位数字后打印每一个数字。
-// 例如输入123，输出1   2   3
+// 8、编程实现输入一个球体的半径，计算并输出其表面积和体积。s=4πR² v=4/3πR ³
 
-
-var n;
-n = prompt('请输入一个三位整数')
-var a, b, c;
-a = parseInt(n / 100);
-b = parseInt(n % 100 / 10);
-c = parseInt(n % 10);
-document.write(a + '\n' + b + '\n' + c);
+var r;
+r = prompt('请输入半径')
+var s, v;
+var u = 3.14;
+s = 4 * u * r * r;
+v = 4 / 3 * u * r * r * r;
+document.write('面积：' + s + '\n');
+document.write('体积：' + v + '\n');

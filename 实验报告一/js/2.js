@@ -1,12 +1,11 @@
-//2、编程实现输入三个整数，计算并输出三个整数的和及平均值。
+// 4、编程输入一个三位整数，拆分每一位数字后打印每一个数字。
+// 例如输入123，输出1   2   3
 
+
+var n;
+n = prompt('请输入一个三位整数')
 var a, b, c;
-
-a = parseInt(prompt('输入第一个整数'));
-b = parseInt(prompt('输入第二个整数'));
-c = parseInt(prompt('输入第三个整数'));
-
-var sum, average;
-sum = a + b + c;
-average = sum / 3;
-document.write(average);
+a = parseInt(n / 100);
+b = parseInt(n % 100 / 10);
+c = parseInt(n % 10);
+document.write(a + '\n' + b + '\n' + c);
