@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 递归函数就是自身调用自己，如果没有递归出口则会无限制的调用执行，所以如果想要退出需要设置递归出口
+
+
+    // function fun() {
+    //   console.log('这是一个递归函数');
+
+    //   fun();
+    // }
+    // fun();
+    var count = 0;
+
+    function fun() {
+      console.log('这是一个递归函数');
+      count++;
+      if (count === 10) {
+        return; // 结束函数需要用return
+      }
+      fun();
+    }
+    fun();
+  </script>
+</body>
+
+</html>

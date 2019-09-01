@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr = [8, 9, 7, 5, 6, 7, 8, 8, 8, 8, 2, 2, 4, 6, 4, 8, 4, 7, 3, 5, 2, 6];
+    var count; //记录移动几次
+    for (var i = 0; i < arr.length; i++) {
+      count = 0;
+      for (var j = i + 1; j < arr.length; j++) {
+        console.log(j);
+        if (arr[i] === arr[j]) {
+          for (var k = j; k < arr.length - 1; k++) {
+            arr[k] = arr[k + 1];
+          }
+
+          arr.length = arr.length - 1;
+          console.log(arr);
+          // console.log(arr.length);
+          console.log(count);
+          count++;
+          console.log(count);
+          j = j - count;
+          console.log(j);
+          console.log(i);
+        }
+      }
+    }
+    // console.log(arr);
+    // console.log(arr.length);
+    // console.log(arr[11]);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // var arr = ['秒杀', '优惠券', 'PLUS会员', '品牌闪购', '拍卖', '京东时尚', '京东超市', '京东生鲜', '海囤全球', '京东金融'];
+    // var str = '<ul>';
+    // for (var i = 0; i < arr.length; i++) {
+    //   str += '<li>' + arr[i] + '</li>';
+    // }
+
+    // str += '</ul>'
+    // document.write(str);
+
+
+    var datas = [{
+      pic: './images/1.webp', // 图片地址
+      title: 'COACH蔻驰女包包', // 商品标题
+      price1: '￥795.00', // 现在价格
+      price2: '￥1799.00' // 原始价格
+    }, {
+      pic: './images/2.webp', // 图片地址
+      title: 'ACH驰女包包', // 商品标题
+      price1: '￥325.00', // 现在价格
+      price2: '￥199.00' // 原始价格
+    }, {
+      pic: './images/3.webp', // 图片地址
+      title: 'CO蔻女包包', // 商品标题
+      price1: '￥295.00', // 现在价格
+      price2: '￥3799.00' // 原始价格
+    }, {
+      pic: './images/4.webp', // 图片地址
+      title: 'COH丑包包', // 商品标题
+      price1: '￥295.00', // 现在价格
+      price2: '￥1199.00' // 原始价格
+    }, {
+      pic: './images/5.webp', // 图片地址
+      title: '女包包', // 商品标题
+      price1: '￥195.00', // 现在价格
+      price2: '￥299.00' // 原始价格
+    }];
+    var str = '<ul>';
+    for (var i = 0; i < datas.length; i++) {
+      str += '<li>\
+          <img src="' + datas[i].pic + '" alt="">\
+              <h4>' + datas[i].title + '</h4>\
+              <p><span>' + datas[i].price1 + '</span><span>' + datas[i].price2 + '</span></p>\
+      </li>';
+    }
+
+    str += '</ul>';
+    document.write(str);
+  </script>
+
+</body>
+
+</html>

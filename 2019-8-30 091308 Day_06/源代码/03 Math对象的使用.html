@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function getRandom() { // 随机取[0,1)
+      var rdm = Math.random();
+      return rdm;
+    }
+
+    function getRandom_10() { // 随机取[1,10]
+      do {
+        var rdm = Math.floor(getRandom() * 11);
+      } while (rdm === 0);
+
+      return rdm;
+    }
+
+    function getRandom_100() { // 随机取[1,100]
+      var rdm1;
+      var rdm2;
+      do {
+        rdm1 = getRandom_10();
+      } while (rdm1 === 0);
+      do {
+        rdm2 = getRandom_10();
+      } while (rdm2 === 0);
+      var rdm = rdm1 * rdm2;
+      return rdm;
+    }
+    (function() {
+      var arr = [];
+      for (var i = 0; i < 10; i++) {
+        arr[arr.length] = getRandom();
+      }
+      console.log(arr);
+    })();
+    (function() {
+      var arr = [];
+      for (var i = 0; i < 10; i++) {
+        arr[arr.length] = getRandom_10();
+      }
+      console.log(arr);
+    })();
+    (function() {
+      var arr = [];
+      for (var i = 0; i < 10; i++) {
+        arr[arr.length] = getRandom_100();
+      }
+      console.log(arr);
+    })();
+  </script>
+</body>
+
+</html>

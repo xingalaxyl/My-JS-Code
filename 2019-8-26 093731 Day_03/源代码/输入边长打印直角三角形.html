@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* .p {
+      margin: 400px 400px 400px 400px;
+
+    } */
+    
+    .hang {
+      height: 1px;
+    }
+    
+    .hang div {
+      float: left;
+    }
+    
+    .fang {
+      width: 1px;
+      height: 1px;
+      background-color: red;
+    }
+    
+    .kong {
+      width: 1px;
+      height: 1px;
+    }
+    
+    .san {
+      border-top: 0.5px solid transparent;
+      border-right: 0.5px solid transparent;
+      border-bottom: 0.5px solid red;
+      border-left: 0.5px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    var bian;
+    bian = prompt('请输入要打印的边长数值:(单位/像素)')
+    document.write('<div class="p">')
+    for (var i = 0; i < bian; i++) {
+      document.write('<div class="hang">')
+      for (var j = 0; j <= i - 1; j++) {
+        document.write('<div class="fang"></div>');
+      }
+      document.write('<div class="san"></div>');
+      for (var k = 0; k < bian - i - 1; k++) {
+        document.write('<div class="kong"></div>');
+      }
+      document.write('</div>')
+    }
+    document.write('</div>')
+  </script>
+</body>
+
+</html>

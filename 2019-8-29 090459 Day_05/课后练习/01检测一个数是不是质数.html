@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 质数是指在大于1的自然数中，除了1和它本身以外不再有其他因数的自然数。
+    // 找出1-100之间的质数，并在控制台打印出来
+    var isPrime; // 判断是不是质数
+    for (var i = 2; i <= 100; i++) {
+      isPrime = true;
+      for (var j = 2; j < i; j++) {
+        if (i % j === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+      if (isPrime) {
+        console.log(i);
+      }
+    }
+  </script>
+</body>
+
+</html>

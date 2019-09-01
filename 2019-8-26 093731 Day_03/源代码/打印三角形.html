@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .p {
+      margin: 200px auto;
+      width: 500px;
+      height: 500px;
+      display: flex;
+      flex-wrap: wrap;
+      transform: rotate(45deg);
+    }
+    
+    .zheng {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+    }
+    
+    .kong {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .san {
+      /* width: 10px;
+      height: 10px; */
+      /* background-color: blue; */
+      /* box-sizing: border-box; */
+      border-bottom: 25px solid blue;
+      border-left: 25px solid blue;
+      border-top: 25px solid transparent;
+      border-right: 25px solid transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    var i, j, k;
+    document.write('<div class="p">')
+    for (i = 0; i < 10; i++) {
+      for (j = 0; j <= i - 1; j++) {
+        document.write('<div class="zheng"></div>');
+      }
+      document.write('<div class="san"></div>');
+      for (k = 0; k < 10 - i - 1; k++) {
+        document.write('<div class="kong"></div>');
+      }
+    }
+    document.write('</div>')
+  </script>
+</body>
+
+</html>

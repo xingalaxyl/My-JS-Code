@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr = [22, 443, 12, 3, 2, 4, 1, 344, 232, 111, 222, 44, 56, 32, 63, 44, 33, 22, 11, 66, 33, 4, 5, 2, 6, 2, 4, 6, 2, 3, 42, 8, 9];
+    var isEqual;
+    var result = [];
+
+    for (var i = 0; i < arr.length; i++) {
+      isEqual = false;
+      for (var j = 0; j < result.length; j++) {
+        if (arr[i] === result[j]) {
+          isEqual = true;
+          break;
+        }
+      }
+      if (!isEqual) {
+        result[result.length] = arr[i];
+      }
+    }
+    console.log(result);
+  </script>
+</body>
+
+</html>

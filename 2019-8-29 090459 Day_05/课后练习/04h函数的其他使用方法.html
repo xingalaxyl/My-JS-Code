@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 命名函数和匿名函数
+    function fun1() {
+
+    }
+    var fun2 = function() {
+
+    }
+
+    // function (){  因为没有名字，所以不能单独使用
+    // }
+    (function() { // 正确使用方法 用来减少全局变量的使用，减少命名冲突，提高代码执行效率（代码寻找变量需要一个一个找，全局变量太多容易使寻找次数增多）
+
+    })();
+
+    // 示例：
+    (function() {
+      var a;
+      var b;
+      var c;
+    })();
+    // 增加局部作用域，减少全局变量使用
+    (function() {
+      var a;
+      var b;
+      var c;
+    })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 选择排序，从第一个一直比到最后一个
+    // 选择排序,总结一句话就是(划重点)：从第一个位置开始比较，找出最小的，和第一个位置互换，开始下一轮。
+    var arr = [13, 432, 65, 345, 75, 123, 876, 423, 54, 453];
+    var max;
+    // var count = 0;
+    // var isChange;
+    for (var i = 0; i < arr.length - 1; i++) {
+      isChange = false;
+      for (var j = i + 1; j < arr.length; j++) {
+        if (arr[i] > arr[j]) {
+          max = arr[i];
+          arr[i] = arr[j];
+          arr[j] = max;
+          //   isChange = true;
+        }
+      }
+      //   if (isChange) {
+      //     count++;
+      //   }
+      //   if (!isChange) {
+      //     break;
+      //   }
+    }
+    console.log(arr);
+  </script>
+</body>
+
+</html>

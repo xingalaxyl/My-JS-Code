@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 回调函数就是让函数作为参数;
+    function fun(num, str, bool, arr, fn) {
+      //   num = 1;
+      //   str = 'abc';
+      //   bool = true;
+      //   arr = [1, 2, 3];
+      //   fn = (function() {
+      //     console.log('这是一个匿名回调函数'); // 这是使用匿名函数作为回调函数
+      //   });
+      console.log(num, str, bool, arr);
+      fn();
+    }
+    // fun();
+
+    function fun2() {
+      console.log('这是一个命名函数作为回调函数使用');
+    }
+    fun(123, 'efg', false, ['a', 'b', 'c'], fun2);
+  </script>
+</body>
+
+</html>

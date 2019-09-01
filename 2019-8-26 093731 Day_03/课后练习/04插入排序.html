@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 插入排序   从第二个数据开始，存储在一个定义的变量中，往前进行比较，知道找到比自己小的插入
+
+
+    var arr = [9, 3, 6, 10, 8];
+    var temp;
+    var i;
+    var j
+    for (i = 1; i < arr.length; i++) {
+      temp = arr[i];
+      j = i;
+      while (j > 0 && arr[j - 1] >= temp) {
+        arr[j] = arr[j - 1];
+        j--;
+      }
+      arr[j] = temp;
+    }
+    console.log(arr);
+  </script>
+</body>
+
+</html>
